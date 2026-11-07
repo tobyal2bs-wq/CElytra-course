@@ -1,0 +1,22 @@
+name: CircleCheckpoints
+version: '1.2.1'
+main: dev.circles.CircleCheckpoints
+api-version: '26.2'
+folia-supported: true
+description: Dense XP-orb checkpoint rings with Axiom-editable handles, for Paper-compatible servers and Folia.
+author: Lukas
+depend: [packetevents]
+softdepend: [PlaceholderAPI]
+commands:
+  circles:
+    description: Play or manage checkpoint courses
+    usage: /circles help
+    aliases: [circle, checkpoints]
+    permission: circles.use
+permissions:
+  circles.use:
+    description: Run courses and view results
+    default: true
+  circles.admin:
+    description: Create and edit courses
+    default: op

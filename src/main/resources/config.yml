@@ -1,0 +1,36 @@
+# Restart the server after editing this file.
+config-version: 3
+rings:
+  # Radius 3.5 makes a 7 x 7 block vertical ring.
+  radius: 3.5
+  # Actual XP-orb appearance, sent as virtual entities. No XP or server entities.
+  orbs-per-ring: 960
+  # Continuous packed band, not several concentric lines. Width extends inward.
+  band-width: 0.45
+  view-distance: 32
+  # Only a player's nearest rings are rendered; course/checkpoint count is unlimited.
+  max-visible-rings: 8
+  refresh-ticks: 10
+editor:
+  # Center display handles are created by /circles edit <course> [checkpoint].
+  poll-ticks: 2
+placeholders:
+  # auto: course elytra, otherwise spawn, otherwise the only configured course.
+  # /circles leaderboard <course> selects an explicit course without a restart.
+  elytra-course: auto
+sidebar:
+  enabled: true
+  # If another plugin owns your sidebar, disable this and use the placeholders in it.
+  title: '<gold><bold>CIRCLES</bold></gold>'
+race:
+  # actionbar: checkpoint + timer above the hotbar. both: also show the sidebar.
+  timer-location: actionbar
+  # Keeps millisecond precision independent of server tick speed.
+  ui-update-ticks: 2
+  finish-display-seconds: 10
+  max-run-minutes: 120
+  # Limits only an individual movement segment, not the length of the course.
+  max-move-blocks: 32
+  allow-flight: false
+  allow-elytra: false
+  allow-vehicles: false
